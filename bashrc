@@ -1,16 +1,15 @@
-# export PATH=/Library/PostgreSQL/9.4/bin/:$PATH
+# loading git aware prompt
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
+# direnv
+eval "$(direnv hook bash)"
 
 # alias(es)
 alias ls='ls -G'
 alias t='tree -C'
 alias ts='t -L 1'
 alias tree='tree -C'
-
-alias ngl="npm list -g --depth=0 2>/dev/null"
-alias nlc="npm list --depth=0 2>/dev/null"
-
-alias yxt="ssh spoudel@172.22.1.105"
-alias youtube-mp3="youtube-dl --extract-audio --audio-format mp3"
 
 # cd helpers
 alias ..='cd ..'
