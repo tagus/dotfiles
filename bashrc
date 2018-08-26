@@ -26,6 +26,12 @@ export CDPATH=.:~:~/Documents:~/Desktop
 export HISTIGNORE="&:ls:ls *"
 export EDITOR=/usr/bin/vim
 
+# simulating osx's pbcopy and pbpaste
+if [ ! $(uname -s) = "Darwin" ]; then
+	alias pbcopy='xsel --clipboard --input'
+	alias pbpaste='xsel --clipboard --output'
+fi
+
 # macros
 function ts() {
   if [[ -z $1 ]]; then

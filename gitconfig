@@ -4,7 +4,7 @@
 	excludesfile = ~/.gitignore_global
 [alias]
 	pm = pull --rebase --autostash
-  st = status
-  last = log -n 1 --pretty=oneline
-  recent = log -n 5 --pretty=oneline
-  append = commit --amend --no-edit
+  	st = status
+  	last = log -n 1 --pretty=oneline
+  	recent = log -n 5 --pretty=oneline
+  	append = commit --amend --no-edit
