@@ -1,10 +1,14 @@
 [core]
-	autocrlf = input
+  autocrlf = input
 	editor = /usr/bin/vim
 	excludesfile = ~/.gitignore_global
+
 [alias]
-	pm = pull --rebase --autostash
-  	st = status
-  	last = log -n 1 --pretty=oneline
-  	recent = log -n 5 --pretty=oneline
-  	append = commit --amend --no-edit
+  pm = pull --rebase --autostash
+  st = status
+  last = log -n 1
+  recent = log -n 5 --pretty=oneline
+  append = commit --amend --no-edit
+  stl = stash list
+  stp = stash pop
+  sts = stash save -u

@@ -1,36 +1,4 @@
-# loading git aware prompt
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
-source "${GITAWAREPROMPT}/main.sh"
-
-# direnv
-eval "$(direnv hook bash)"
-
-# alias(es)
-alias ls='ls -G'
-alias t='tree -C'
-alias ts='t -L 1'
-alias tree='tree -C'
-
-# cd helpers
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-# bash ui
-# adding color to bash
-export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
-
-# bash tips implementation
-export PATH=$PATH:$HOME/.local/bin
-export CDPATH=.:~:~/Documents:~/Desktop
-export HISTIGNORE="&:ls:ls *"
-export EDITOR=/usr/bin/vim
-
-# simulating osx's pbcopy and pbpaste
-if [ ! $(uname -s) = "Darwin" ]; then
-	alias pbcopy='xsel --clipboard --input'
-	alias pbpaste='xsel --clipboard --output'
-fi
+_os="$(uname -s)"
 
 # macros
 function ts() {
@@ -48,3 +16,64 @@ function ts() {
     fi
   fi
 }
+
+# checks if the given command exists
+function exists() {
+  if [[ ! -z $1 ]]; then
+    command -v $1 > /dev/null
+    return $?
+  else
+    return 1
+  fi
+}
+
+# loading git aware prompt
+if [ ! -d $HOME/.bash/git-aware-prompt ]; then
+  echo "did not find git aware prompt"
+  return 
+else
+  export GITAWAREPROMPT=$HOME/.bash/git-aware-prompt
+  source "${GITAWAREPROMPT}/main.sh"
+fi
+
+# direnv
+if exists direnv; then
+  eval "$(direnv hook bash)"
+else
+  echo "did not find direnv"
+  return
+fi
+
+# alias(es)
+alias ls='ls -G'
+alias tree='tree -C'
+
+# cd helpers
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
+# bash ui
+# adding color to bash
+export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
+
+# bash tips implementation
+export PATH=$PATH:$HOME/.local/bin
+export CDPATH=.:~:~/Documents:~/Desktop
+export HISTIGNORE="&:ls:ls *"
+export EDITOR=/usr/bin/vim
+
+# OS specific config
+case $_os in
+  Darwin) 
+    ;;
+  Linux)
+    if exists xsel; then
+    	alias pbcopy='xsel --clipboard --input'
+	    alias pbpaste='xsel --clipboard --output'
+    else
+      echo "did not find xsel"
+      return
+    fi
+    ;;
+esac
