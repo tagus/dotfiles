@@ -66,6 +66,7 @@ export EDITOR=/usr/bin/vim
 # OS specific config
 case $_os in
   Darwin) 
+    export PATH=$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin
     ;;
   Linux)
     if exists xsel; then
