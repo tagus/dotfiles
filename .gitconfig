@@ -7,8 +7,10 @@
   pm = pull --rebase --autostash
   st = status
   last = log -n 1
-  recent = log -n 5 --pretty=oneline
+  recent = log -n 5 --pretty='format:%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%cr)%Creset <%an>'
   append = commit --amend --no-edit
   stl = stash list
   stp = stash pop
   sts = stash save -u
+  unstage = reset HEAD
+  undo = !git reset --hard HEAD && git clean -fd
