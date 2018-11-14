@@ -60,7 +60,7 @@ export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dir
 # bash tips implementation
 export PATH=$PATH:$HOME/.local/bin
 export CDPATH=.:~:~/Documents:~/Desktop
-export HISTIGNORE="&:ls:ls *"
+# export HISTIGNORE="&:ls:ls *"
 export EDITOR=/usr/bin/vim
 
 # OS specific config

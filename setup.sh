@@ -10,7 +10,7 @@ echo "setting up dotfiles from '$DOTFILES'"
 
 cd $HOME
 ln -fs $DOTFILES/vim .vi
-ln -fs $DOTFILES/vimrc .vimrc
+ln -fs $DOTFILES/.vimrc .vimrc
 ln -fs $DOTFILES/.gitignore .gitignore_global
 
-echo -e "[include]\n\tpath = $HOME/.dotfiles/gitconfig" >> .gitconfig
+echo -e "[include]\n\tpath = $HOME/.dotfiles/.gitconfig" >> .gitconfig
