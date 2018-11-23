@@ -47,6 +47,7 @@ fi
 # alias(es)
 alias ls='ls -G'
 alias tree='tree -C'
+alias myp='ifconfig | grep inet | awk "{print $2}" | sed -e "s/\/.*$//" | head -n 1'
 
 # cd helpers
 alias ..='cd ..'

@@ -14,3 +14,4 @@
   sts = stash save -u
   unstage = reset HEAD
   undo = !git reset --hard HEAD && git clean -fd
+  scmt = commit -S
