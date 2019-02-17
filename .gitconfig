@@ -17,3 +17,6 @@
   scmt = commit -S
   br = branch -a
   co = checkout
+  nb = checkout -t master -b
+  bd = branch -D
+  update = rebase master
