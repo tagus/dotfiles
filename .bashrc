@@ -27,6 +27,12 @@ function exists() {
   fi
 }
 
+function port() {
+  if [[ ! -z $1 ]]; then
+    lsof -t -i :$1
+  fi
+}
+
 # loading git aware prompt
 if [ ! -d $HOME/.bash/git-aware-prompt ]; then
   echo "did not find git aware prompt"
