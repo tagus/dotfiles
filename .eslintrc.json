@@ -1,0 +1,51 @@
+{
+  "extends": [
+    "plugin:react/recommended"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "version": "16.2.0"
+    }
+  },
+  "rules": {
+    "max-len": [
+      "warn",
+      {
+        "code": 100,
+        "tabWidth": 2,
+        "ignoreUrls": true
+      }
+    ],
+    "arrow-parens": ["error", "as-needed"],
+    "eol-last": ["error", "always"],
+    "indent": ["error", 2, {
+      "SwitchCase": 1,
+      "MemberExpression": 0,
+      "FunctionExpression": {
+        "parameters": 0
+      }
+    }],
+    "new-cap": ["error", {"newIsCap": true, "capIsNew": false}],
+    "no-console": ["error", {"allow": [ "warn", "error", "debug" ]}],
+    "no-undef": ["error"],
+    "object-curly-spacing": ["error", "always"],
+    "prefer-const": "off",
+    "quote-props": "off",
+    "react/jsx-no-undef": "off",
+    "react/prop-types": ["error", {"skipUndeclared": true}],
+    "react/react-in-jsx-scope": "off",
+    "react/display-name": "off",
+    "require-jsdoc": "off",
+    "array-bracket-spacing": ["error", "always", { "singleValue": true }]
+  }
+}
