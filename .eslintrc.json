@@ -14,10 +14,12 @@
   },
   "settings": {
     "react": {
-      "version": "16.2.0"
+      "version": "16.8.3"
     }
   },
   "rules": {
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
     "max-len": [
       "warn",
       {
@@ -30,7 +32,7 @@
     "eol-last": ["error", "always"],
     "indent": ["error", 2, {
       "SwitchCase": 1,
-      "MemberExpression": 0,
+      "MemberExpression": 1,
       "FunctionExpression": {
         "parameters": 0
       }
@@ -45,6 +47,8 @@
     "react/prop-types": ["error", {"skipUndeclared": true}],
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
+    "react/jsx-key": ["error"],
+    "react/jsx-space-before-closing": ["error", "never"],
     "require-jsdoc": "off",
     "array-bracket-spacing": ["error", "always", { "singleValue": true }]
   }
