@@ -70,6 +70,12 @@ export PATH=$PATH:$HOME/.local/bin
 export CDPATH=.:~:~/Documents:~/Desktop
 export EDITOR=/usr/bin/vim
 
+# add ruby gems to path
+if exists ruby && exists gem; then 
+  GEM_PATH=$(ruby -r rubygems -e 'puts Gem.user_dir')
+  PATH="$GEM_PATH/bin:$PATH"
+fi
+
 # OS specific config
 case $_os in
   Darwin) 
