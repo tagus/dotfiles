@@ -19,4 +19,4 @@
   co = checkout
   nb = checkout -t master -b
   bd = branch -D
-  update = rebase master
+  update = !git fetch origin master && git rebase origin/master
