@@ -27,6 +27,8 @@ function exists() {
   fi
 }
 
+# determines the pid of an application running
+# at the specified port
 function port() {
   if [[ ! -z $1 ]]; then
     lsof -t -i :$1
@@ -48,6 +50,13 @@ if exists direnv; then
 else
   echo "did not find direnv"
   return
+fi
+
+# setting up golang
+if exists go; then
+  export GOPATH=$HOME/gocode
+  export GOBIN=$GOPATH/bin
+  export PATH=$GOBIN:$PATH
 fi
 
 # alias(es)
