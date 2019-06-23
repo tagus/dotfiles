@@ -4,7 +4,8 @@
   ],
   "env": {
     "es6": true,
-    "browser": true
+    "browser": true,
+    "node": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -40,6 +41,7 @@
     "new-cap": ["error", {"newIsCap": true, "capIsNew": false}],
     "no-console": ["error", {"allow": [ "warn", "error", "debug" ]}],
     "no-undef": ["error"],
+    "no-unused-vars": ["error"],
     "object-curly-spacing": ["error", "always"],
     "prefer-const": "off",
     "quote-props": "off",
@@ -48,7 +50,7 @@
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
     "react/jsx-key": ["error"],
-    "react/jsx-space-before-closing": ["error", "never"],
+    "react/jsx-tag-spacing": ["error"],
     "require-jsdoc": "off",
     "array-bracket-spacing": ["error", "always", { "singleValue": true }]
   }
