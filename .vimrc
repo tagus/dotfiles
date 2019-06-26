@@ -18,7 +18,7 @@ set wrapmargin=8
 set number
 set expandtab
 set tabstop=2
-set textwidth=100
+set textwidth=80
 
 " configuring syntax
 filetype on
@@ -28,3 +28,7 @@ autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_us
 autocmd BufNewFile,BufRead *.cl set filetype=cool
 autocmd BufNewFile,BufRead *.coffee set filetype=coffee
 autocmd BufNewFile,BufRead *.ts set filetype=typescript
+
+" highlight text when over text-length
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
