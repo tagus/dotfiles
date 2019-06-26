@@ -40,6 +40,8 @@
       }
     }],
     "comma-dangle": ["error", "always-multiline"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
     "new-cap": ["error", {"newIsCap": true, "capIsNew": false}],
     "no-console": ["error", {"allow": [ "warn", "error", "debug" ]}],
     "no-undef": ["error"],

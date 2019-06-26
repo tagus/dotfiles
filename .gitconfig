@@ -17,6 +17,6 @@
   scmt = commit -S
   br = branch -a
   co = checkout
-  nb = checkout -t master -b
+  nb = checkout -t origin/master -b
   bd = branch -D
   update = !git fetch origin master && git rebase origin/master
