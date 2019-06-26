@@ -8,7 +8,8 @@
     "node": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2017,
+    "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true
     }
@@ -38,6 +39,7 @@
         "parameters": 0
       }
     }],
+    "comma-dangle": ["error", "always-multiline"],
     "new-cap": ["error", {"newIsCap": true, "capIsNew": false}],
     "no-console": ["error", {"allow": [ "warn", "error", "debug" ]}],
     "no-undef": ["error"],
@@ -50,7 +52,7 @@
     "react/react-in-jsx-scope": "off",
     "react/display-name": "off",
     "react/jsx-key": ["error"],
-    "react/jsx-tag-spacing": ["error"],
+    "react/jsx-tag-spacing": ["error", { "beforeSelfClosing": "never" }],
     "require-jsdoc": "off",
     "array-bracket-spacing": ["error", "always", { "singleValue": true }]
   }
