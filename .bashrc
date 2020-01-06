@@ -72,7 +72,7 @@ alias ....='cd ../../..'
 
 # bash ui
 # adding color to bash
-export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
+# export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
 
 # bash tips implementation
 export PATH=$PATH:$HOME/.local/bin
@@ -92,11 +92,11 @@ case $_os in
     export PATH=$PATH:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     ;;
   Linux)
-    if exists xsel; then
-    	alias pbcopy='xsel --clipboard --input'
-	    alias pbpaste='xsel --clipboard --output'
+    if exists xclip; then
+    	alias pbcopy="xclip -sel clip"
+	    alias pbpaste="xclip -sel clip -o"
     else
-      echo "did not find xsel"
+      echo "did not find xclip"
       return
     fi
     ;;
