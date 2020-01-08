@@ -35,6 +35,13 @@ function port() {
   fi
 }
 
+# removes anything currently in the clipboard
+# and replaces it with the word 'cleared'
+clear-cb() {
+  echo "cleared" | pbcopy;
+}
+
+
 # loading git aware prompt
 if [ ! -d $HOME/.bash/git-aware-prompt ]; then
   echo "did not find git aware prompt"
@@ -72,7 +79,7 @@ alias ....='cd ../../..'
 
 # bash ui
 # adding color to bash
-# export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
+export PS1="\[$txtgrn\]\w \[$txtrst\]\[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\n> "
 
 # bash tips implementation
 export PATH=$PATH:$HOME/.local/bin
