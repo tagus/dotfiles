@@ -36,6 +36,7 @@ set textwidth=100
 filetype indent on
 autocmd BufNewFile,BufRead *.re set filetype=reason
 autocmd BufNewFile,BufRead *.md setlocal spell spelllang=en_us
+autocmd BufNewFile,BufRead *.ml setlocal shiftwidth=4 softtabstop=4 expandtab
 
 " search settings
 set incsearch               " search as characters as entered
