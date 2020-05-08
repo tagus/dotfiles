@@ -19,4 +19,4 @@
   co = checkout
   nb = checkout -t origin/master -b
   bd = branch -D
-  update = !git fetch origin master && git rebase origin/master
+  update = !git fetch origin master && git rebase origin/master --autostash
