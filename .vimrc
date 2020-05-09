@@ -8,12 +8,14 @@ endif
 call plug#begin('~/.vim/plugged')
 " vim plugin for fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'chr4/nginx.vim'
 call plug#end()
 
 set nocompatible
 
 " editor settings
-" set ai									  " auto indenting
+set ai									    " auto indenting
+set smartindent
 set sm											" matching braces
 
 set lazyredraw							" redraw screen only when we need to
@@ -26,10 +28,10 @@ set encoding=utf-8
 syntax on
 color darkspace
 
-set wrapmargin=8
+" set wrapmargin=4        " number of characters from where wrapping starts
 set number
 set expandtab
-set tabstop=2
+set tabstop=4
 set textwidth=100
 
 " configuring syntax based on filetype
