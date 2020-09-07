@@ -22,13 +22,11 @@
     }
   },
   "rules": {
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"],
     "max-len": [
       "warn",
       {
         "code": 100,
-        "tabWidth": 2,
+        "tabWidth": 4,
         "ignoreUrls": true
       }
     ],

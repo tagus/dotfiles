@@ -66,6 +66,11 @@ if exists go; then
   export PATH=$GOBIN:$PATH
 fi
 
+# setting up yarn
+if exists yarn; then
+  export PATH=$(yarn global bin):$PATH
+fi
+
 # alias(es)
 # TODO: add general support for colors
 # alias ls='ls -G'
