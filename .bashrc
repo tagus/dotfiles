@@ -17,6 +17,10 @@ function ts() {
   fi
 }
 
+function killdkr() {
+    docker ps | tail +2 | awk '{ print $1 }' | xargs docker kill
+}
+
 # checks if the given command exists
 function exists() {
   if [[ ! -z $1 ]]; then
@@ -121,3 +125,4 @@ case $_os in
     fi
     ;;
 esac
+
