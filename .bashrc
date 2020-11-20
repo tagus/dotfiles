@@ -104,7 +104,10 @@ case $_os in
     export PATH=$PATH:"/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
     ;;
   Linux)
-    if exists xclip; then
+    if cat /proc/sys/kernel/osrelease | rg 'Microsoft' > /dev/null; then
+        alias pbcopy="clip.exe"
+        alias pbpaste="powershell.exe -command 'Get-Clipboard'"
+    elif exists xclip; then
     	alias pbcopy="xclip -sel clip"
 	    alias pbpaste="xclip -sel clip -o"
     else
