@@ -20,4 +20,5 @@
   nb = checkout -t origin/master -b
   bd = branch -D
   update = !git fetch origin master && git rebase origin/master --autostash
+  update2 = !git fetch origin main && git rebase origin/main --autostash
   sign = commit -S --amend --no-edit

@@ -71,6 +71,11 @@ if exists yarn; then
   export PATH=$(yarn global bin):$PATH
 fi
 
+# setting up youtube dl shortcuts
+if exists youtube-dl; then
+    alias wav-dl="youtube-dl -x --audio-format wav"
+fi
+
 # alias(es)
 # TODO: add general support for colors
 # alias ls='ls -G'
