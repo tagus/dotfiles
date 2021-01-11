@@ -15,7 +15,7 @@
   unstage = reset HEAD
   undo = !git reset --hard HEAD && git clean -fd
   scmt = commit -S
-  br = branch -a
+  br = branc
   co = checkout
   nb = checkout -t origin/master -b
   bd = branch -D

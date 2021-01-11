@@ -83,6 +83,7 @@ fi
 # alias(es)
 # TODO: add general support for colors
 # alias ls='ls -G'
+alias less='less -R'
 alias tree='tree -C'
 alias myp='ifconfig | grep inet | awk "{print $2}" | sed -e "s/\/.*$//" | head -n 1'
 
