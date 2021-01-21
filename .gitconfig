@@ -1,24 +1,26 @@
 [core]
-  autocrlf = input
-	editor = /usr/bin/vim
-	excludesfile = ~/.gitignore_global
+    autocrlf = input
+    editor = /usr/bin/vim
+    excludesfile = ~/.gitignore_global
 
 [alias]
-  pm = pull --rebase --autostash
-  st = status
-  last = log -n 1
-  recent = log -n 5 --pretty='format:%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%cr)%Creset <%an> (%G?)'
-  append = commit --amend --no-edit
-  stl = stash list
-  stp = stash pop
-  sts = stash save -u
-  unstage = reset HEAD
-  undo = !git reset --hard HEAD && git clean -fd
-  scmt = commit -S
-  br = branch
-  co = checkout
-  nb = checkout -t origin/master -b
-  bd = branch -D
-  update = !git fetch origin master && git rebase origin/master --autostash
-  update2 = !git fetch origin main && git rebase origin/main --autostash
-  sign = commit -S --amend --no-edit
+    pm = pull --rebase --autostash
+    st = status
+    last = log -n 1
+    recent = log -n 5 --pretty='format:%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%cr)%Creset <%an> (%G?)'
+    append = commit --amend --no-edit
+    stl = stash list
+    stp = stash pop
+    sts = stash save -u
+    unstage = reset HEAD
+    undo = !git reset --hard HEAD && git clean -fd
+    scmt = commit -S
+    br = branch
+    co = checkout
+    nb = checkout -t origin/master -b
+    bd = branch -D
+    update = !git fetch origin master && git rebase origin/master --autostash
+    update2 = !git fetch origin main && git rebase origin/main --autostash
+    sign = commit -S --amend --no-edit
+    up = !git push origin $(git branch --show-current) --force
+    hk = !git remote prune origin

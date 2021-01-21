@@ -30,9 +30,11 @@ color darkspace
 
 " set wrapmargin=4        " number of characters from where wrapping starts
 set number
-set expandtab
 set tabstop=4
+set shiftwidth=4
+set softtabstop=4
 set textwidth=100
+set expandtab
 
 " configuring syntax based on filetype
 filetype indent on
