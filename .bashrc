@@ -60,14 +60,13 @@ if exists direnv; then
   eval "$(direnv hook bash)"
 else
   echo "did not find direnv"
-  return
 fi
 
 # setting up golang
 if exists go; then
   export GOPATH=$HOME/gocode
   export GOBIN=$GOPATH/bin
-  export PATH=$GOBIN:$PATH
+  export PATH=/usr/local/go/bin:$GOBIN:$PATH
 fi
 
 # setting up yarn
@@ -86,6 +85,7 @@ fi
 alias less='less -R'
 alias tree='tree -C'
 alias myp='ifconfig | grep inet | awk "{print $2}" | sed -e "s/\/.*$//" | head -n 1'
+alias wav-dl='youtube-dl -x --audio-format wav'
 
 # cd helpers
 alias ..='cd ..'
@@ -105,6 +105,14 @@ export EDITOR=/usr/bin/vim
 if exists ruby && exists gem; then 
   GEM_PATH=$(ruby -r rubygems -e 'puts Gem.user_dir')
   PATH="$GEM_PATH/bin:$PATH"
+fi
+
+# bash autocompletions
+if exists complete; then
+    complete -W "\`grep -oE '^[a-zA-Z0-9_.-]+:([^=]|$)' Makefile | \
+            sed 's/[^a-zA-Z0-9_.-]*$//'\`" make
+else
+    echo "bash-completion not found"
 fi
 
 # OS specific config
