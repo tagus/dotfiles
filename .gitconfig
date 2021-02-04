@@ -16,6 +16,7 @@
     stp = stash pop
     sts = stash save -u
     sta = stash apply
+    std = stash drop
     unstage = reset HEAD
     undo = !git reset --hard HEAD && git clean -fd
     scmt = commit -S
