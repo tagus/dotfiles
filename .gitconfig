@@ -25,7 +25,7 @@
     co = checkout
     nb = !git co -t $(git branch --show-current) -b
     bd = branch -D
-    update = !git fetch origin master && git rebase origin/master --autostash
+    update = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash
     update2 = !git fetch origin main && git rebase origin/main --autostash
     sign = commit -S --amend --no-edit
     up = !git push origin $(git branch --show-current) --force

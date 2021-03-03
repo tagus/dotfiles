@@ -23,6 +23,5 @@ cd $HOME
 ln -fs $DOTFILES/vim .vim
 ln -fs $DOTFILES/.vimrc .vimrc
 ln -fs $DOTFILES/.gitignore .gitignore_global
-ln -fs $DOTFILES/.eslintrc.json .eslintrc
 
 echo -e "[include]\n\tpath = $HOME/.dotfiles/.gitconfig" >> .gitconfig
