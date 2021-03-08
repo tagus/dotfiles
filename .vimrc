@@ -9,6 +9,7 @@ call plug#begin('~/.vim/plugged')
 " vim plugin for fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'chr4/nginx.vim'
+Plug 'vim-ruby/vim-ruby'
 call plug#end()
 
 set nocompatible
