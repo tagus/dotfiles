@@ -29,3 +29,4 @@
     sign = commit -S --amend --no-edit
     up = !git push origin $(git branch --show-current) --force
     hk = !git remote prune origin
+    cp = cherry-pick
