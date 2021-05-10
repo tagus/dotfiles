@@ -21,6 +21,7 @@
     undo = !git reset --hard HEAD && git clean -fd
     scmt = commit -S
     br = branch
+    bn = branch -m
     co = checkout
     nb = checkout -t origin/master -b
     bd = branch -D
@@ -30,3 +31,5 @@
     up = !git push origin $(git branch --show-current) --force
     hk = !git remote prune origin
     cp = cherry-pick
+    cprb = "!f() { git co $2 && git bn tmp-branch && git co $1 && git co -b $2 && git cp $(git log --format=\"%H\" -n 1 tmp-branch) && git bd tmp-branch; }; f"
+
