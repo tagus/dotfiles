@@ -11,7 +11,7 @@
     st = status
     last = log -n 1
     recent = log -n 5 --pretty='format:%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%cr)%Creset <%an> (%G?)'
-    append = commit --amend --no-edit
+    amend = commit --amend --no-edit
     stl = stash list
     stp = stash pop
     sts = stash save -u
@@ -23,7 +23,7 @@
     br = branch
     bn = branch -m
     co = checkout
-    nb = checkout -t origin/master -b
+    nb = !git co -t $(git branch --show-current) -b
     bd = branch -D
     update = !git fetch origin master && git rebase origin/master --autostash
     update2 = !git fetch origin main && git rebase origin/main --autostash
