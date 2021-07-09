@@ -17,6 +17,10 @@ function ts() {
   fi
 }
 
+function shortid() {
+    uuidgen | cut -c -8
+}
+
 function killdkr() {
     docker ps | tail +2 | awk '{ print $1 }' | xargs docker kill
 }
@@ -56,6 +60,8 @@ else
 fi
 
 # direnv
+# TODO: determine why direnv does not exist with scp
+# something related to a different PATH var being used?
 if exists direnv; then
   eval "$(direnv hook bash)"
 else
@@ -67,6 +73,7 @@ if exists go; then
   export GOPATH=$HOME/gocode
   export GOBIN=$GOPATH/bin
   export PATH=/usr/local/go/bin:$GOBIN:$PATH
+  export CGO_CFLAGS_ALLOW="-Xpreprocessor"
 fi
 
 # setting up yarn
