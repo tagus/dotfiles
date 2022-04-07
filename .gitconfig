@@ -23,6 +23,7 @@
     br = branch
     bn = branch -m
     co = checkout
+    cot = checkout --track
     nb = !git co -t $(git branch --show-current) -b
     bd = branch -D
     update = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash

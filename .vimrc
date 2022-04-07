@@ -29,7 +29,7 @@ set encoding=utf-8
 syntax on
 color darkspace
 
-" set wrapmargin=4        " number of characters from where wrapping starts
+set wrapmargin=4        " number of characters from where wrapping starts
 set number
 set tabstop=4
 set shiftwidth=4
