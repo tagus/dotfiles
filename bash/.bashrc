@@ -6,8 +6,8 @@ else
   exit 1
 fi
 
-. $DOTFILES/bash/macros.sh
-. $DOTFILES/bash/env.sh
-. $DOTFILES/bash/prompt.sh
-. $DOTFILES/bash/autocomplete.sh
-. $DOTFILES/bash/alias.sh
+source $DOTFILES/bash/macros.sh
+source $DOTFILES/bash/env.sh
+source $DOTFILES/bash/prompt.sh
+source $DOTFILES/bash/autocomplete.sh
+source $DOTFILES/bash/alias.sh
