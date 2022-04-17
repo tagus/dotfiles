@@ -13,4 +13,5 @@ alias clear-cb='echo "cleared" | pbcopy'
 
 alias dc='docker compose'
 alias d-kill='docker ps | tail +2 | awk "{ print $1 }" | xargs docker kill'
-alias d-rm-orphans='docker images | rg none | awk "{ print $2 }" | xargs docker rmi'
+alias d-rmi-orphans="docker images | rg none | awk '{ print \$3 }' | xargs docker rmi"
+alias d-rm-orphans="docker ps --all | rg Exit | awk '{ print \$1 }' | xargs docker rm"
