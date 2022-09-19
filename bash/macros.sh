@@ -34,3 +34,8 @@ function port() {
     lsof -t -i :$1
   fi
 }
+
+function rand() {
+  DEFAULT_LEN=128
+  echo $RANDOM | md5 | head -c ${1:-$DEFAULT_LEN}; echo;
+}

@@ -29,12 +29,13 @@ set encoding=utf-8
 syntax on
 color darkspace
 
-set wrapmargin=4        " number of characters from where wrapping starts
 set number
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set textwidth=100
+set textwidth=0
+set wrapmargin=0        " number of characters from where wrapping starts
+set fo=cq
 set expandtab
 
 " configuring syntax based on filetype
@@ -48,8 +49,8 @@ set incsearch               " search as characters as entered
 set hlsearch                " highlight matches
 
 " highlight text when over text-length
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+" highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+" match OverLength /\%81v.\+/
 
 let g:opamshare = substitute(system('opam var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
