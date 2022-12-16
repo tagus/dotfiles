@@ -47,3 +47,11 @@ function tolower() {
 function toupper() {
     tr '[:lower:]' '[:upper:]'
 }
+
+# converts all heics to half size jpegs
+function heic() {
+    for f in *.heic; do
+        echo "converting $f"
+        convert -resize 50% $f "${f%.*}.jpeg"
+    done
+}
