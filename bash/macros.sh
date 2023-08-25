@@ -39,3 +39,11 @@ function rand() {
   DEFAULT_LEN=128
   echo $RANDOM | md5 | head -c ${1:-$DEFAULT_LEN}; echo;
 }
+
+function tolower() {
+    tr '[:upper:]' '[:lower:]'
+}
+
+function toupper() {
+    tr '[:lower:]' '[:upper:]'
+}
