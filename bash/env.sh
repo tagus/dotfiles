@@ -9,12 +9,13 @@ fi
 
 
 # direnv
-# TODO: determine why direnv does not exist with scp
-# something related to a different PATH var being used?
-if exists direnv; then
-  eval "$(direnv hook bash)"
-else
-  echo "did not find direnv"
+# basically ensuring that this is only being run from a terminal (tty)
+if [ -t 0 ]; then
+  if exists direnv; then
+    eval "$(direnv hook bash)"
+  else
+    echo "did not find direnv"
+  fi
 fi
 
 
