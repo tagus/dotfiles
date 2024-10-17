@@ -5,6 +5,10 @@
 ## useful aliases
 alias ls='ls -G'
 alias less='less -R'
+alias tree='tree -C'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 
 if exists gpg2; then
   alias gpg=gpg2
@@ -29,7 +33,7 @@ setopt PROMPT_SUBST
 autoload -Uz compinit && compinit
 
 ## starship initialization
-eval $(starship init zsh)
+source <(starship init zsh)
 
 ################################################################################
 
