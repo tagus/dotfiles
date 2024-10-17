@@ -4,7 +4,7 @@
 
 ## useful aliases
 alias ls='ls -G'
-alias less='less -R'
+alias less='less -RN'
 alias tree='tree -C'
 alias ..='cd ..'
 alias ...='cd ../..'

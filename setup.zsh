@@ -15,4 +15,8 @@ if [[ "$PWD" != "$HOME" ]]; then
   exit 1
 fi
 
+## disables the last login time message that shows up
+## everytime the shell starts up
+touch ~/.hushlogin
+
 # echo -e "[include]\n\tpath = $HOME/.dotfiles/.gitconfig" >> .gitconfig
