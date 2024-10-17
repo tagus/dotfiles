@@ -1,0 +1,31 @@
+[core]
+  autocrlf = input
+  editor = /usr/bin/vim
+
+[init]
+  defaultBranch = main
+
+[alias]
+  amend = commit --amend --no-edit
+  bd = branch -D
+  bn = branch -m
+  br = branch
+  co = checkout
+  cot = checkout --track
+  cp = cherry-pick
+  hk = !git remote prune origin
+  last = log -n 1
+  nb = co -b
+  pm = pull --rebase --autostash
+  recent = log -n 5 --pretty='format:%C(yellow)%h%Creset -%C(bold red)%d%Creset %s %Cgreen(%cr)%Creset <%an> (%G?)'
+  scmt = commit -S
+  st = status
+  sta = stash apply
+  std = stash drop
+  stl = stash list
+  stp = stash pop
+  sts = stash save -u
+  undo = !git reset --hard HEAD && git clean -fd
+  unstage = reset HEAD
+  up = !git push origin $(git branch --show-current) --force
+  update = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash
