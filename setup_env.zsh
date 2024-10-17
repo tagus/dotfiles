@@ -23,6 +23,7 @@ export SAVEHIST=100000
 setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
+setopt PROMPT_SUBST
 
 ## setting up auto completions
 autoload -Uz compinit && compinit
