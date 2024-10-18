@@ -22,7 +22,7 @@ export HISTSIZE=20000
 export SAVEHIST=100000
 export CDPATH=.:~:~/Desktop
 
-## ensuring that history is persisted immediately and is avaiable
+## ensuring that history is persisted immediately and is available
 ## across all zsh sessions
 
 setopt APPEND_HISTORY

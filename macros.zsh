@@ -17,7 +17,7 @@ ts() {
       tree -aCL $1
     else
       if [[ -z $2 ]]; then
-        tree -aC $1
+        tree -aC $1 -L 1
       else
         tree $1 -aCL $2
       fi
