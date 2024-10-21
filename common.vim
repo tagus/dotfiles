@@ -21,6 +21,6 @@ set softtabstop=2     " number of spaces shown for a tab
 set incsearch         " search as characters as entered
 set hlsearch          " highlight matches
 
-nmap <C-w> :w<CR>     " ctrl+w saves the file
-vmap <CR> "+y         " enter will automatically copy selection to clipboard
-nmap <C-o> :normal o  " add a new line below cursor without entering insert mode
+nmap <C-w> :w<CR>         " ctrl+w saves the file
+vmap <CR> "+y             " enter will automatically copy selection to clipboard
+nmap <C-o> :normal o<CR>  " add a new line below cursor without entering insert mode
