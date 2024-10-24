@@ -24,6 +24,9 @@ export HISTSIZE=20000
 export SAVEHIST=100000
 export CDPATH=.:~:~/Desktop
 
+# avoid pyenv from modifying prompt
+export PYENV_VIRTUALENV_DISABLE_PROMPT=1
+
 ## ensuring that history is persisted immediately and is available
 ## across all zsh sessions
 

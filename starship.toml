@@ -41,9 +41,6 @@ disabled = true
 [docker_context]
 disabled = true
 
-[python]
-disabled = true
-
 [rust]
 disabled = true
 
@@ -63,3 +60,6 @@ disabled = false
 [git_branch]
 disabled = false
 format = '[\[$symbol$branch(:$remote_branch)\]](green bold) '
+
+[python]
+disabled = false
