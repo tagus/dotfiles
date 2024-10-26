@@ -1,0 +1,15 @@
+{
+  "$schema": "vscode://schemas/settings/user",
+  "editor.tabSize": 2,
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "editor.rulers": [
+    {
+      "column": 128
+    },
+  ],
+  "recommentations": [
+    "vimvscodevim.vim",
+    "chadalen.vscode-jetbrains-icon-theme",
+    "tamasfe.even-better-toml"
+  ]
+}
