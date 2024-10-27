@@ -54,3 +54,11 @@ for kitty, we can include the common settings in the ~/.config/kitty/kitty.conf`
 ```
 include ~/.config/dotfiles_sp/kitty.common.conf
 ```
+
+## vscode
+
+some helpful extensions 
+
+- vimvscodevim.vim
+- chadalen.vscode-jetbrains-icon-theme
+- tamasfe.even-better-toml
