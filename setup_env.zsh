@@ -7,6 +7,7 @@ alias ls='ls -G'
 alias less='less -RN'
 alias tree='tree -C'
 alias tt='toggle-theme'
+alias caf='caffeinate -di'
 
 alias ..='cd ..'
 alias ...='cd ../..'
