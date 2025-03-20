@@ -82,6 +82,13 @@ storage-usage() {
 }
 
 
+filter-json() {
+  # filter_json filters out any invalid json from stdin
+  while IFS= read -r line; do
+    echo "$line" | jq empty 2>/dev/null && echo "$line"
+  done
+}
+
 ##################################################################################
 ## theming config
 ##################################################################################
