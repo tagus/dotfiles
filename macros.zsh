@@ -89,23 +89,8 @@ filter-json() {
   done
 }
 
-##################################################################################
-## theming config
-##################################################################################
 
-
-is-dark() {
-  # checks if the current appearance is set to light or dark mode
-  # if exit code is 0, then dark, else light
-  defaults read -g AppleInterfaceStyle &> /dev/null
-}
-
-
-toggle-theme() {
-  # toggles the kitty theme based on the appearance config
-  if is-dark ; then
-    kitty +kitten themes Ayu
-  else
-    kitty +kitten themes GitHub Light
-  fi
+is-commit-ahead() {
+  # is-commit-ahead checks if the first commit is ahead of the second commit
+  git merge-base --is-ancestor $1 $2 && echo "second commit is ahead" || echo "first commit is ahead"
 }
