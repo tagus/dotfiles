@@ -2,12 +2,12 @@
 
 common environment setup
 
-here's some common config that needs to be manually handled
+we'll need to manually include the env setup files in `.zshrc`
 
 ```sh
-## disables the last login time message that shows up
-## everytime the shell starts up
-touch ~/.hushlogin
+# sourcing dotfiles
+source ~/.config/.dotfiles/macros.zsh
+source ~/.config/.dotfiles/setup_env.zsh
 ```
 
 ## minimal required dependencies
@@ -30,8 +30,8 @@ more sense to symbolically link the config file directly.
 
 ```zsh
 # link the common vscode user settings
-ln -s ~/.config/dotfiles_sp/vscode.settings.json ~/.config/Code/User/settings.json
-ln -s ~/.config/dotfiles_sp/starship.toml ~/.config/starship.toml
+ln -s ~/.config/.dotfiles/vscode.settings.json ~/.config/Code/User/settings.json
+ln -s ~/.config/.dotfiles/starship.toml ~/.config/starship.toml
 ```
 
 ### include configs
@@ -40,19 +40,19 @@ for git, we can include the common `gitconfig` into the top level `~/.gitconfig`
 
 ```toml
 [include]
-  path = ~/.config/dotfiles_sp/gitconfig
+  path = ~/.config/.dotfiles/gitconfig
 ```
 
 for vim, we can use the `include` directive to do ths same
 
 ```sh
-source ~/.config/dotfiles_sp/common.vim
+source ~/.config/.dotfiles/common.vim
 ```
 
 for kitty, we can include the common settings in the ~/.config/kitty/kitty.conf` file
 
 ```
-include ~/.config/dotfiles_sp/kitty.common.conf
+include ~/.config/.dotfiles/kitty.common.conf
 ```
 
 ## vscode
