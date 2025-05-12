@@ -49,6 +49,13 @@ if [[ -d "~/.local/bin" ]]; then
   export PATH=$PATH:$HOME/.local/bin
 fi
 
+if exists go; then
+  export GOPATH="$HOME/go"
+  export GOBIN="$GOPATH/bin"
+  # adding go bin to $PATH
+  export PATH=$PATH:$GOBIN
+fi
+
 ## adding vscode to PATH
 VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 if [[ -d "$VSCODE_PATH" ]]; then
