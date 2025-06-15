@@ -28,4 +28,4 @@
   undo = !git reset --hard HEAD && git clean -fd
   unstage = reset HEAD
   up = !git push origin $(git branch --show-current) --force
-  update = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash
+  sync = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash
