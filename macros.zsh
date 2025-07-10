@@ -90,7 +90,16 @@ filter-json() {
 }
 
 
-is-commit-ahead() {
-  # is-commit-ahead checks if the first commit is ahead of the second commit
-  git merge-base --is-ancestor $1 $2 && echo "second commit is ahead" || echo "first commit is ahead"
+commit-has-changes() {
+  # commit-has-changes checks if the second commit has the changes in the first commit
+  # if true, then the first commit is an ancestor of the second commit
+  # if false, then the first commit is not an ancestor and the second commit doesn't have changes 
+  # from the first commit
+  git merge-base --is-ancestor $1 $2
+}
+
+
+get-first-col() {
+  # useful for parsing the pod name from the output of `kubectl get pods`
+  cut -d' ' -f1
 }
