@@ -43,7 +43,7 @@ for git, we can include the common `gitconfig` into the top level `~/.gitconfig`
   path = ~/.config/.dotfiles/gitconfig
 ```
 
-for vim, we can use the `include` directive to do ths same
+for vim, we can use the `include` directive to do the same
 
 ```sh
 source ~/.config/.dotfiles/common.vim

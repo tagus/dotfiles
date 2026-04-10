@@ -21,23 +21,26 @@ fi
 
 ## sensible defaults
 export EDITOR=$(which vim)
+export HISTFILE="$HOME/.zsh_history"
 export HISTSIZE=20000
 export SAVEHIST=100000
 export CDPATH=.:~:~/Desktop
 
-# avoid pyenv from modifying prompt
+## avoid pyenv from modifying prompt
 export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 ## ensuring that history is persisted immediately and is available
 ## across all zsh sessions
 
 setopt APPEND_HISTORY
+setopt HIST_IGNORE_SPACE
 setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt PROMPT_SUBST
 
 ## setting up auto completions
-autoload -Uz compinit && compinit
+autoload -Uz compinit
+compinit -d "$HOME/.zcompdump"
 
 ## starship initialization
 source <(starship init zsh)
@@ -56,8 +59,12 @@ if exists go; then
   export PATH=$PATH:$GOBIN
 fi
 
-## adding vscode to PATH
+## adding vscode to PATH (macos)
 VSCODE_PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 if [[ -d "$VSCODE_PATH" ]]; then
   export PATH=$PATH:$VSCODE_PATH
 fi
+
+## setting up NVM if it exists
+export NVM_DIR="$HOME/.nvm"
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"

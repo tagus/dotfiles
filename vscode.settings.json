@@ -1,7 +1,7 @@
 {
   "$schema": "vscode://schemas/settings/user",
   "editor.tabSize": 2,
-  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-auto",
+  "workbench.iconTheme": "vscode-jetbrains-icon-theme-2023-dark",
   "editor.minimap.enabled": false,
   "editor.rulers": [
     {
