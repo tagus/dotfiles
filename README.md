@@ -39,8 +39,8 @@ source ~/.config/.dotfiles/bash_profile.sh
 
 load order is:
 
-1. `shell/setup_env.sh`
-2. `shell/macros.sh`
+1. `shell/macros.sh`
+2. `shell/setup_env.sh`
 3. every readable file in `shell/local/*.sh`
 
 the idea is that shared stuff lives in `shell/` and machine/work-specific stuff
