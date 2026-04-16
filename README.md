@@ -17,7 +17,7 @@ this repo is mostly:
 - `shell/macros.sh`: helper functions
 - `shell/local/*.sh`: local-only stuff sourced last
 - `.gitconfig`: shared git config + aliases
-- `vscode.settings.json`: vscode settings
+- `vscode/settings.json`: vscode settings
 - `starship.toml`: prompt config
 - `tmux.conf`: tmux config
 - `ghostty.config`: ghostty config
@@ -66,7 +66,7 @@ ImageMagick's `convert`.
 link these into the right place:
 
 ```bash
-ln -sf ~/.config/.dotfiles/vscode.settings.json "$HOME/Library/Application Support/Code/User/settings.json"
+ln -sf ~/.config/.dotfiles/vscode/settings.json "$HOME/Library/Application Support/Code/User/settings.json"
 ln -sf ~/.config/.dotfiles/starship.toml ~/.config/starship.toml
 ln -sf ~/.config/.dotfiles/tmux.conf ~/.tmux.conf
 ln -sf ~/.config/.dotfiles/nvim ~/.config/nvim

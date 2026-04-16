@@ -1,0 +1,16 @@
+{
+  "Comment Ruler": {
+    "prefix": "ruler",
+    "description": "inserts a comment horizontal ruler",
+    "body": [
+      "/******************************************************************************/"
+    ]
+  },
+  "Hash Ruler": {
+    "prefix": "hruler",
+    "description": "inserts a hash comment horizontal ruler",
+    "body": [
+      "################################################################################"
+    ]
+  }
+}
