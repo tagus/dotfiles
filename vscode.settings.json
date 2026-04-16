@@ -1,0 +1,13 @@
+{
+  "$schema": "vscode://schemas/settings/user",
+  "editor.tabSize": 2,
+  "editor.minimap.enabled": false,
+  "editor.rulers": [
+    {
+      "column": 128,
+    }
+  ],
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "extensions.ignoreRecommendations": true
+}
