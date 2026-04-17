@@ -43,7 +43,7 @@ export SAVEHIST=100000
 ################################################################################
 
 ## starship initialization
-source <(starship init bash)
+eval "$(starship init bash)"
 
 ## setting up fzf
 eval "$(fzf --bash)"

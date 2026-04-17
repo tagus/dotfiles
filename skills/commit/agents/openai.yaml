@@ -1,0 +1,4 @@
+interface:
+  display_name: "Commit"
+  short_description: "Create commit messages"
+  default_prompt: "Use $commit to inspect this repo's history and draft a commit message in the preferred local format."
