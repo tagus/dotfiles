@@ -45,6 +45,12 @@ export SAVEHIST=100000
 ## starship initialization
 eval "$(starship init bash)"
 
+## bash completion
+if [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]]; then
+  export BASH_COMPLETION_COMPAT_DIR="/opt/homebrew/etc/bash_completion.d"
+  source "/opt/homebrew/etc/profile.d/bash_completion.sh"
+fi
+
 ## setting up fzf
 eval "$(fzf --bash)"
 

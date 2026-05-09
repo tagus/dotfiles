@@ -50,4 +50,5 @@
   "chat.viewWelcome.enabled": false,
   "chat.viewSessions.enabled": false,
   "explorer.confirmPasteNative": false,
+  "css.lint.unknownAtRules": "ignore",
 }
