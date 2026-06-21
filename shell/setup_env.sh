@@ -10,7 +10,6 @@ alias cat='bat'
 alias tree='tree -C'
 alias caf='caffeinate -di'
 alias vi='vim'
-alias vim='nvim'
 alias cd='z'
 
 alias ..='cd ..'
@@ -21,6 +20,10 @@ alias k='kubectl'
 alias tt='tilty'
 alias lg='lazygit'
 alias flux='tl flux'
+
+if exists nvim; then
+  alias vim='nvim'
+fi
 
 if exists eza; then
   alias ls='eza -lh --group-directories-first --icons=auto'
@@ -46,9 +49,10 @@ export SAVEHIST=100000
 eval "$(starship init bash)"
 
 ## bash completion
-if [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]]; then
-  export BASH_COMPLETION_COMPAT_DIR="/opt/homebrew/etc/bash_completion.d"
-  source "/opt/homebrew/etc/profile.d/bash_completion.sh"
+HOMEBREW_PREFIX="$(brew --prefix)"
+if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
+  export BASH_COMPLETION_COMPAT_DIR="${HOMEBREW_PREFIX}/etc/bash_completion.d"
+  source "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh"
 fi
 
 ## setting up fzf
