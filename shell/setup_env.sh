@@ -59,7 +59,9 @@ if [[ -r "${HOMEBREW_PREFIX}/etc/profile.d/bash_completion.sh" ]]; then
 fi
 
 ## setting up fzf
-eval "$(fzf --bash)"
+if exists fzf; then
+  eval "$(fzf --bash)"
+fi
 
 ## setting up zoxide (better cd)
 eval "$(zoxide init bash)"
