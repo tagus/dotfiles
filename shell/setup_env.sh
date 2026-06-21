@@ -5,8 +5,6 @@
 ################################################################################
 
 ## useful aliases
-alias less='bat'
-alias cat='bat'
 alias tree='tree -C'
 alias caf='caffeinate -di'
 alias vi='vim'
@@ -23,6 +21,11 @@ alias flux='tl flux'
 
 if exists nvim; then
   alias vim='nvim'
+fi
+
+if exists bat; then
+  alias less='bat'
+  alias cat='bat'
 fi
 
 if exists eza; then
