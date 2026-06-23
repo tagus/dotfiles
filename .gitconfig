@@ -29,3 +29,6 @@
   unstage = reset HEAD
   up = !git push origin $(git branch --show-current) --force
   sync = !git fetch origin $(git branch --show-current) && git rebase origin/$(git branch --show-current) --autostash
+  # lists recent changes for the given path
+  changes = log -n5 --format="[%h] %an, %ar : %s" -- 
+
